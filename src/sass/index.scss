@@ -1,0 +1,20 @@
+@import "variables";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+
+html,
+body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+#content {
+    flex: 1 0 auto;
+}
+#footer {
+    flex-shrink: 0;
+}

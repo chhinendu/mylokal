@@ -1,0 +1,17 @@
+@import './search-dashboard/search-dashboard.scss';
+//@import './list-view/list-view.scss';
+
+@media only screen and (min-width: 280px) {
+    #content {
+        #breadcrumb {
+            span {
+                font: 18px/21px Georgia;
+                color: var(--medium-gray);
+            }
+            .main{
+                font: bold 18px/21px Georgia;
+                color: var(--brand-text-dark);
+            }
+        }
+    }
+}

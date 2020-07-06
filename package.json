@@ -11,10 +11,12 @@
   "author": "Chhinendu",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^9.8.4",
     "css-loader": "^3.6.0",
     "file-loader": "^6.0.0",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
+    "postcss-loader": "^3.0.0",
     "sass": "^1.26.9",
     "sass-loader": "^9.0.0",
     "style-loader": "^1.2.1",
@@ -24,6 +26,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.1",
-    "bootstrap": "^4.5.0"
+    "bootstrap": "^4.5.0",
+    "material-components-web": "^7.0.0"
   }
 }

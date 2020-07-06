@@ -1,0 +1,106 @@
+@use "../../../../node_modules/@material/list/mdc-list";
+@use "../../../../node_modules/@material/menu-surface/mdc-menu-surface";
+@use "../../../../node_modules/@material/menu/mdc-menu";
+@use "../../../../node_modules/@material/select/mdc-select";
+@use "@material/button";
+
+@include button.core-styles;
+
+@media only screen and (min-width: 280px) {
+    #search-dashboard {
+        padding: 20px 0;
+        border-bottom: 1px solid var(--light-blue);
+        .panel {
+            width: 260px;
+            margin: auto;
+            clear: both;
+            .title {
+                font: 14px/17px Verdana;
+                color: var(--dark-gray);
+            }
+        }
+
+        #distance {
+            #actions {
+                margin-right: 10px;
+                width: 45px;
+                div {
+                    background: var(--off-white) 0% 0% no-repeat padding-box;
+                    box-light-blue: 0px 1px 2px var(--light-blue);
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 22.5px;
+                    &:first-of-type {
+                        margin-bottom: 5px;
+                    }
+                    i {
+                        color: var(--brand-bg-color);
+                    }
+                }
+            }
+            #result {
+                background-color: var(--white);
+                width: 200px;
+                height: 95px;
+                border-radius: 15px;
+                padding: 10px;
+                div {
+                    &:first-of-type {
+                        font: Bold 32px/39px Verdana;
+                        color: var(--brand-text-dark);
+                        flex: 1;
+                        margin-top: 1px;
+                    }
+                }
+                .kms {
+                    font: 14px/17px Verdana;
+                    color: var(--medium-gray);
+                    flex-shrink: 0;
+                }
+            }
+        }
+
+        #location {
+            .mdc-select {
+                background: var(--white) 0% 0% no-repeat padding-box;
+                box-light-blue: 0px 2px 3px var(--off-white);
+                border: 1px solid var(--off-white);
+                font: 14px/17px Verdana;
+                &:not(.mdc-select--disabled) .mdc-floating-label {
+                    font: 14px/17px Verdana;
+                    color: var(--medium-gray);
+                }
+                .mdc-select__anchor {
+                    height: 45px;
+                }
+            }
+            #location-map {
+                background: var(--off-white) 0% 0% no-repeat padding-box;
+                box-light-blue: 0px 1px 2px var(--light-blue);
+                width: 45px;
+                height: 45px;
+                border-radius: 22.5px;
+                span {
+                    color: var(--brand-bg-color);
+                }
+            }
+        }
+
+        #action-buttons {
+            button {
+                width: 140px;
+                height: 48px;
+                border: 2px solid var(--brand-bg-color);
+                border-radius: 50px;
+                text-transform: none;
+            }
+            #map-button {
+                color: var(--brand-bg-color);
+            }
+            #filter-button {
+                color: var(--white);
+                background-color: var(--brand-bg-color);
+            }
+        }
+    }
+}

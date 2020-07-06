@@ -1,0 +1,68 @@
+<div id="distance" class="panel">
+  <p class="title">Distance</p>
+  <div id="actions" class="float-left">
+    <div id="add" class="d-flex justify-content-center align-items-center">
+      <i class="fas fa-plus"></i>
+    </div>
+    <div id="remove" class="d-flex justify-content-center align-items-center">
+      <i class="fas fa-minus"></i>
+    </div>
+  </div>
+  <div id="result" class="float-right d-flex align-items-center flex-column">
+    <div>20</div>
+    <div class="kms d-flex align-items-center">
+      <span class="material-icons">speed</span>
+      <span>KMS</span>
+    </div>
+  </div>
+</div>
+<div id="location" class="panel pt-3">
+  <p class="title">Location</p>
+  <div id="location-select" class="mdc-select mdc-select--outlined">
+    <div class="mdc-select__anchor location-select">
+      <span id="demo-selected-text" class="mdc-select__selected-text"></span>
+      <span class="mdc-select__dropdown-icon">
+        <svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5">
+          <polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd"
+            points="7 10 12 15 17 10">
+          </polygon>
+          <polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd" points="7 15 12 10 17 15">
+          </polygon>
+        </svg>
+      </span>
+      <span class="mdc-notched-outline">
+        <span class="mdc-notched-outline__leading"></span>
+        <span class="mdc-notched-outline__notch">
+          <span id="outlined-select-label" class="mdc-floating-label">Current</span>
+        </span>
+        <span class="mdc-notched-outline__trailing"></span>
+      </span>
+    </div>
+
+    <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
+      <ul class="mdc-list">
+        <li class="mdc-list-item mdc-list-item--selected" data-value="" aria-selected="true">Current</li>
+        <li class="mdc-list-item" data-value="grains">
+          <span class="mdc-list-item__text">
+            Maharashtra
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="location-map" class="float-right d-flex justify-content-center align-items-center">
+    <div id="map" class="">
+      <span class="material-icons"> edit_location </span>
+    </div>
+  </div>
+</div>
+<div id="action-buttons" class="d-flex justify-content-around pt-3">
+  <button id="filter-button" class="mdc-button--raised">
+    <span class="mdc-button__label">Filters</span>
+  </button>
+  <button id="map-button" class="mdc-button">
+    <div class="mdc-button__ripple"></div>
+    <i class="material-icons mdc-button__icon" aria-hidden="true">map</i>
+    <span class="mdc-button__label">Map View</span>
+  </button>
+</div>

@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
     mode: 'development',
@@ -21,8 +22,26 @@ module.exports = {
                     'style-loader',
                     // Translates CSS into CommonJS
                     'css-loader',
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: () => [autoprefixer()]
+                        }
+                    },
                     // Compiles Sass to CSS
-                    'sass-loader',
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            // Prefer Dart Sass
+                            implementation: require('sass'),
+
+                            // See https://github.com/webpack-contrib/sass-loader/issues/804
+                            webpackImporter: false,
+                            sassOptions: {
+                                includePaths: ['./node_modules', '.']
+                            },
+                        }
+                    },
                 ],
             },
             {

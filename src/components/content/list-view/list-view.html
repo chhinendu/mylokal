@@ -1,58 +1,87 @@
 <div id="search-count" class="pb-2">10 people are here</div>
-<div class="person-card clearfix">
-    <div class="image-wrapper">
-        <span class="status-icon"></span>
-    </div>
-    <div class="status active clearfix">
-        <div class="status-text text-center float-left">Active</div>
-        <div id="status-menu" class="mdc-menu-surface--anchor float-right">
-            <button class="mdc-icon-button material-icons float-right">more_vert</button>
-            <div class="mdc-menu mdc-menu-surface">
-                <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1">
-                    <li class="mdc-list-item" role="menuitem">
-                        <span class="mdc-list-item__text">Follow</span>
-                    </li>
-                    <li class="mdc-list-divider" role="separator"></li>
-                    <li class="mdc-list-item" role="menuitem">
-                        <span class="mdc-list-item__text mr-2">Report</span>
-                        <span class="material-icons flag">flag</span>
-                    </li>
-                    <li class="mdc-list-item" role="menuitem">
-                        <span class="mdc-list-item__text mr-2">Block</span>
-                        <span class="material-icons block">block</span>
-                    </li>
-                </ul>
-            </div>
+<div id="person-list-view">
+    <div class="person-card clearfix">
+        <div class="image-wrapper">
+            <span class="status-icon"></span>
         </div>
-    </div>
-    <div class="person-details">
-        <p class="name">JANE MORGAN (JANE)</p>
-        <p class="reputation">
-            <i class="fas fa-crown"></i>
-            <span class="text">Reputation 4/5</span>
-            <i class="fas fa-info-circle"></i>
-        </p>
-        <p class="followers d-flex align-items-center">
-            <span class="mr-1">38.2K views</span>
-            <i class="fas fa-circle mr-1"></i>
-            <span class="mr-1">25K followers</span>
-            <span class="material-icons"> supervisor_account </span>
-        </p>
-        <p class="connections">See connections (5)</p>
-        <p class="description">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical <span>read more</span></p>
-        <div class="actions row">
-            <div class="col-4 text-center"><i class="far fa-heart"></i><p>3K favorites</p></div>
-            <div class="col-4 text-center"><i class="far fa-comment-alt"></i><p>3K comments</p></div>
-            <div class="col-4 text-center"><i class="fas fa-share-alt"></i><p>24 shares</p></div>
-        </div>
-        <div class="activity mt-4">
-            <div class="d-flex align-items-center justify-content-end">
-                <span class="mr-1">CA, USA</span> 
-                <div class="person-pin">
-                    <span class="material-icons">person_pin_circle</span>
+        <div class="status active clearfix">
+            <div class="status-text text-center float-left">Active</div>
+            <div id="status-menu" class="mdc-menu-surface--anchor float-right">
+                <button class="mdc-icon-button material-icons float-right">more_vert</button>
+                <div class="mdc-menu mdc-menu-surface">
+                    <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1">
+                        <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text">Follow</span>
+                        </li>
+                        <li class="mdc-list-divider" role="separator"></li>
+                        <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text mr-2">Report</span>
+                            <span class="material-icons flag">flag</span>
+                        </li>
+                        <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text mr-2">Block</span>
+                            <span class="material-icons block">block</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div>User since 10 months ago</div>
+        </div>
+        <div class="person-details">
+            <p class="name">JANE MORGAN (JANE)</p>
+            <p class="reputation">
+                <i class="fas fa-crown"></i>
+                <span class="text">Reputation 4/5</span>
+                <i class="fas fa-info-circle"></i>
+            </p>
+            <p class="followers d-flex align-items-center">
+                <span class="mr-1">38.2K views</span>
+                <i class="fas fa-circle mr-1"></i>
+                <span class="mr-1">25K followers</span>
+                <span class="material-icons"> supervisor_account </span>
+            </p>
+            <p class="connections">See connections (5)</p>
+            <p class="description">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+                piece of classical <span>read more</span></p>
+            <div class="actions row">
+                <div class="col-4 text-center"><i class="far fa-heart"></i>
+                    <p>3K favorites</p>
+                </div>
+                <div class="col-4 text-center"><i class="far fa-comment-alt"></i>
+                    <p>3K comments</p>
+                </div>
+                <div class="col-4 text-center"><i class="fas fa-share-alt"> </i>
+                    <p>24 shares</p>
+                    <div class="mdc-dialog">
+                        <div class="mdc-dialog__container">
+                          <div class="mdc-dialog__surface"
+                            role="alertdialog"
+                            aria-modal="true"
+                            aria-labelledby="my-dialog-title"
+                            aria-describedby="my-dialog-content">
+                            <div class="mdc-dialog__content" id="my-dialog-content">
+                                <i class="fab fa-facebook-f mr-2"></i>
+                                <i class="fab fa-twitter mr-2"></i>
+                                <i class="fab fa-linkedin-in mr-2"></i>
+                                <i class="far fa-envelope"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mdc-dialog__scrim"></div>
+                      </div>
+                </div>
+            </div>
+            <div class="activity mt-4">
+                <div class="d-flex align-items-center justify-content-end">
+                    <span class="mr-1">CA, USA</span>
+                    <div class="person-pin">
+                        <span class="material-icons">person_pin_circle</span>
+                    </div>
+                </div>
+                <div>User since 10 months ago</div>
+            </div>
         </div>
     </div>
 </div>
+<div id="person-map-view" style="display: none;"></div>
+
+

@@ -1,3 +1,11 @@
+@use "@material/textfield";
+@use "@material/textfield/icon";
+@use "@material/dialog";
+
+@include textfield.core-styles;
+@include icon.icon-core-styles;
+@include dialog.core-styles;
+
 @media only screen and (min-width: 280px) {
     #header {
         #header-bar {
@@ -20,6 +28,38 @@
                 width: 30px;
                 height: 30px;
                 display: inline-block;
+            }
+            .mdc-dialog {
+                .mdc-dialog__content {
+                    padding: 0;
+                    .md-close, .search, .search-results {
+                        padding: 20px;
+                    }
+                }
+                .mdc-dialog__surface {
+                    width: calc(100vw);
+                    height: 500px;
+                    .mdc-dialog__content {
+                        background: var(--light-gray) 0% 0% no-repeat padding-box;
+                    }
+                }
+                .md-close {
+                    font: 14px/16px Georgia;
+                    color: var(--almost-black);
+                    height: 50px;
+                    background-color: var(--white);
+                }
+                .mdc-floating-label {
+                    font: 10px/17px Verdana;
+                }
+                .mdc-text-field {
+                    font-size: 8px;
+                }
+                .search-results {
+                    font: 14px/16px Georgia;
+                    color: var(--medium-gray);
+                    height: 300px;
+                }
             }
         }
     }

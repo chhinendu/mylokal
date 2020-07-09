@@ -1,9 +1,10 @@
 import contentHTML from './content.html';
 import './content.scss';
 import searchDashboardHTML from './search-dashboard/search-dashboard.html';
-import {MDCSelect} from '@material/select';
-import {MDCMenu} from '@material/menu';
-import {MDCDialog} from '@material/dialog';
+import { MDCSelect } from '@material/select';
+import { MDCMenu } from '@material/menu';
+import { MDCDialog } from '@material/dialog';
+import {MDCTextField} from '@material/textfield';
 import listViewHTML from './list-view/list-view.html';
 import './list-view/list-view.scss';
 
@@ -36,3 +37,12 @@ document.querySelector('#status-menu .mdc-icon-button').addEventListener('click'
 
 const dialog = new MDCDialog(document.querySelector('.actions .mdc-dialog'));
 document.querySelector('.actions .fa-share-alt').addEventListener('click', () => dialog.open());
+
+const dialogReport = new MDCDialog(document.querySelector('.report-dialog'));
+document.querySelector('.report-person').addEventListener('click', () => dialogReport.open());
+
+const dialogFilter = new MDCDialog(document.querySelector('#filters'));
+document.querySelector('#filter-button').addEventListener('click', () => dialogFilter.open());
+
+new MDCTextField(document.querySelector('#keyword-search .mdc-text-field'));
+new MDCTextField(document.querySelector('#person-search .mdc-text-field'));

@@ -1,10 +1,30 @@
+@use "@material/icon-button";
+@use "@material/dialog";
+@use "@material/list/mdc-list";
+@use "@material/menu-surface/mdc-menu-surface";
+@use "@material/menu/mdc-menu";
+@use "@material/select/mdc-select";
+@use "@material/button";
+@use "@material/textfield";
+@use "@material/textfield/icon";
+@use "@material/form-field/mdc-form-field";
+@use "@material/checkbox/mdc-checkbox";
+@use "@material/notched-outline/mdc-notched-outline";
+
 @import "variables";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i');
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i");
+
+@include textfield.core-styles;
+@include icon.icon-core-styles;
+@include dialog.core-styles;
+@include button.core-styles;
+@include icon-button.core-styles;
+@include dialog.core-styles;
 
 html,
 body {
@@ -29,5 +49,28 @@ body {
 @media only screen and (min-width: 280px) {
     #content {
         padding: 10px 15px;
+    }
+    .mdc-select {
+        background: var(--white) 0% 0% no-repeat padding-box;
+        box-shadow: 0px 2px 3px var(--off-white);
+        border: 1px solid var(--off-white);
+        font: 14px/17px Verdana;
+        &:not(.mdc-select--disabled) .mdc-floating-label {
+            font: 14px/17px Verdana;
+            color: var(--medium-gray);
+        }
+        .mdc-select__anchor {
+            height: 45px;
+        }
+    }
+    .mdc-checkbox__background {
+        background: var(--white) 0% 0% no-repeat padding-box;
+        border: 3px solid;
+        border-color: var(--light-blue) !important;
+    }
+    .mdc-checkbox + label {
+        color: var(--dark-gray);
+        font: 12px/15px Verdana;
+        margin-bottom: 0;
     }
 }

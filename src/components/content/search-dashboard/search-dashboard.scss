@@ -1,11 +1,3 @@
-@use "../../../../node_modules/@material/list/mdc-list";
-@use "../../../../node_modules/@material/menu-surface/mdc-menu-surface";
-@use "../../../../node_modules/@material/menu/mdc-menu";
-@use "../../../../node_modules/@material/select/mdc-select";
-@use "@material/button";
-
-@include button.core-styles;
-
 @media only screen and (min-width: 280px) {
     #search-dashboard {
         padding: 20px 0;
@@ -26,7 +18,7 @@
                 width: 45px;
                 div {
                     background: var(--off-white) 0% 0% no-repeat padding-box;
-                    box-light-blue: 0px 1px 2px var(--light-blue);
+                    box-shadow: 0px 1px 2px var(--light-blue);
                     width: 45px;
                     height: 45px;
                     border-radius: 22.5px;
@@ -61,22 +53,9 @@
         }
 
         #location {
-            .mdc-select {
-                background: var(--white) 0% 0% no-repeat padding-box;
-                box-light-blue: 0px 2px 3px var(--off-white);
-                border: 1px solid var(--off-white);
-                font: 14px/17px Verdana;
-                &:not(.mdc-select--disabled) .mdc-floating-label {
-                    font: 14px/17px Verdana;
-                    color: var(--medium-gray);
-                }
-                .mdc-select__anchor {
-                    height: 45px;
-                }
-            }
             #location-map {
                 background: var(--off-white) 0% 0% no-repeat padding-box;
-                box-light-blue: 0px 1px 2px var(--light-blue);
+                box-shadow: 0px 1px 2px var(--light-blue);
                 width: 45px;
                 height: 45px;
                 border-radius: 22.5px;
@@ -94,12 +73,81 @@
                 border-radius: 50px;
                 text-transform: none;
             }
-            #map-button, #list-button {
+            #map-button,
+            #list-button {
                 color: var(--brand-bg-color);
             }
             #filter-button {
                 color: var(--white);
                 background-color: var(--brand-bg-color);
+            }
+        }
+        .mdc-dialog {
+            .mdc-dialog__content {
+                padding: 0;
+                .md-close {
+                    padding: 20px;
+                    font: 14px/16px Georgia;
+                    color: var(--almost-black);
+                    #filter-title {
+                        font: 18px/21px Georgia;
+                    }
+                }
+                .filter-wrapper {
+                    padding: 20px;
+                    background: var(--light-gray) 0% 0% no-repeat padding-box;
+                    #sort-by {
+                        p {
+                            font: 16px/21px Roboto;
+                            color: var(--dark-gray);
+                        }
+                        span {
+                            padding: 8px;
+                            background: var(--white) 0% 0% no-repeat padding-box;
+                            box-shadow: 0px 2px 3px var(--off-white);
+                            border: 1px solid var(--light-blue);
+                            font: 14px/17px Verdana;
+                            color: var(--brand-bg-color);
+                            display: inline-block;
+                            margin: 5px;
+                            border-radius: 20px;
+                        }
+                    }
+                    #search-count {
+                        font: 12px/15px Verdana;
+                        color: var(--dark-gray);
+                        margin-top: 10px;
+                    }
+                    .mdc-floating-label {
+                        color: var(--medium-gray);
+                        font: 16px/19px Verdana;
+                    }
+                    .mdc-text-field-helper-line {
+                        div {
+                            display: flex;
+                            align-items: center;
+                        }
+                        .material-icons {
+                            font-size: 14px;
+                            margin-right: 5px;
+                        }
+                        color: var(--dark-gray);
+                        font: 12px/15px Verdana;
+                    }
+                }
+            }
+            .mdc-dialog__surface {
+                width: calc(100vw);
+                height: 500px;
+                .mdc-dialog__content {
+                    background: var(--light-gray) 0% 0% no-repeat padding-box;
+                }
+            }
+            .md-close {
+                font: 14px/16px Georgia;
+                color: var(--almost-black);
+                height: 50px;
+                background-color: var(--white);
             }
         }
     }

@@ -1,11 +1,3 @@
-@use "@material/textfield";
-@use "@material/textfield/icon";
-@use "@material/dialog";
-
-@include textfield.core-styles;
-@include icon.icon-core-styles;
-@include dialog.core-styles;
-
 @media only screen and (min-width: 280px) {
     #header {
         #header-bar {

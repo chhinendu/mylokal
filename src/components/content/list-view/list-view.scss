@@ -1,8 +1,3 @@
-@use "@material/icon-button";
-@use "@material/dialog";
-@include icon-button.core-styles;
-@include dialog.core-styles;
-
 @media only screen and (min-width: 280px) {
     #list-view {
         #search-count {
@@ -32,6 +27,9 @@
                         margin: 10px;
                         position: absolute;
                     }
+                }
+                .flag {
+                    color: var(--brand-yellow);
                 }
                 .status {
                     width: 100%;
@@ -64,13 +62,28 @@
                         }
                         .material-icons {
                             font-size: 18px;
-                            &.flag {
-                                color: var(--brand-yellow);
-                            }
                             &.block {
                                 color: var(--brand-red);
                             }
                         }
+                    }
+                }
+                .report-dialog {
+                    .mdc-dialog__title {
+                        font: 18px/24px Verdana;
+                        color: var(--brand-text-dark);
+                    }
+                    .mdc-floating-label {
+                        color: var(--medium-gray);
+                    }
+                    #reportButton {
+                        background-color: var(--brand-yellow);
+                        color: var(--white);
+                        border-radius: 20px;
+                    }
+                    button {
+                        color: var(--dark-gray);
+                        font: 16px/19px Verdana;
                     }
                 }
                 .person-details {

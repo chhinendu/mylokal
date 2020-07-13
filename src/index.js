@@ -1,5 +1,6 @@
 import './sass/index.scss';
 import './components';
+import "materialize-css/dist/js/materialize";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCZLxVEtRN3gv651qj1KToB3SzGjgMwjiA",

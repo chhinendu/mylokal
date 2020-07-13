@@ -118,6 +118,40 @@
                         color: var(--dark-gray);
                         margin-top: 10px;
                     }
+                    .date-range {
+                        .title {
+                            color: var(--dark-gray);
+                            font: 14px/17px Verdana;
+                        }
+                        fieldset {
+                            max-width: calc(35vw);
+                            input {
+                                height: 24px;
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                    .category {
+                        label {
+                            color: var(--dark-gray);
+                            font: 16px/19px Verdana;
+                            margin-right: 10px;
+                        }
+                    }
+                    .category-list {
+                        padding-left: 20px;
+                        p {
+                            color: var(--dark-gray);
+                            font: Bold 14px/17px Verdana;
+                        }
+                        .category-type {
+                            padding-left: 20px;
+                            p {
+                                color: var(--medium-gray);
+                                font: 14px/17px Verdana;
+                            }
+                        }
+                    }
                     .mdc-floating-label {
                         color: var(--medium-gray);
                         font: 16px/19px Verdana;

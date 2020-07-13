@@ -4,7 +4,9 @@ import searchDashboardHTML from './search-dashboard/search-dashboard.html';
 import { MDCSelect } from '@material/select';
 import { MDCMenu } from '@material/menu';
 import { MDCDialog } from '@material/dialog';
-import {MDCTextField} from '@material/textfield';
+import { MDCTextField } from '@material/textfield';
+import { MDCSlider } from '@material/slider';
+import { MDCSwitch } from '@material/switch';
 import listViewHTML from './list-view/list-view.html';
 import './list-view/list-view.scss';
 
@@ -46,3 +48,18 @@ document.querySelector('#filter-button').addEventListener('click', () => dialogF
 
 new MDCTextField(document.querySelector('#keyword-search .mdc-text-field'));
 new MDCTextField(document.querySelector('#person-search .mdc-text-field'));
+
+const slider = new MDCSlider(document.querySelector('.mdc-slider'));
+slider.listen('MDCSlider:change', () => console.log(`Value changed to ${slider.value}`));
+// Known issue - https://github.com/material-components/material-components-web/issues/1017
+dialogFilter.listen('MDCDialog:opened', () => slider.layout());
+
+document.addEventListener('DOMContentLoaded', function () {
+  var elems = document.querySelectorAll('.datepicker');
+  var instances = M.Datepicker.init(elems);
+});
+
+new MDCSelect(document.getElementById('status-select'));
+
+new MDCSwitch(document.querySelector('.mdc-switch'));
+

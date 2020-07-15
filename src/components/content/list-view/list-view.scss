@@ -1,4 +1,4 @@
-@media only screen and (min-width: 280px) {
+@media (min-width: 280px) {
     #list-view {
         #search-count {
             font: 12px/15px Verdana;
@@ -167,21 +167,18 @@
                     }
                 }
             }
+            .ads-card {
+                background: transparent url("../../../assets/img/ads.png") 0% 0% no-repeat padding-box;
+                border-radius: 15px;
+                width: 100%;
+                height: 250px;
+                background-size: cover;
+            }
         }
         #person-map-view {
             background: transparent url("../../../assets/img/map.png") 0% 0% no-repeat padding-box;
             width: 100%;
             height: 384px;
         }
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    #filter-md-wrapper {
-        flex: 1;
-        border-right: 1px solid var(--light-blue);
-    }
-    #person-list-wrapper {
-        flex: 2;
     }
 }

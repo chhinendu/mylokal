@@ -1,4 +1,4 @@
-@media only screen and (min-width: 280px) {
+@media (min-width: 280px) {
     
     #search-dashboard {
         padding: 20px 0;
@@ -110,10 +110,10 @@
             }
         }
     }
-    
+
 }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
     #distance-location {
         padding: 20px;
         margin: 0 20px;

@@ -1,17 +1,45 @@
-@import './search-dashboard/search-dashboard.scss';
+@import "./search-dashboard/search-dashboard.scss";
 //@import './list-view/list-view.scss';
 
-@media only screen and (min-width: 280px) {
+@media (min-width: 280px) {
     #content {
         #breadcrumb {
             span {
                 font: 18px/21px Georgia;
                 color: var(--medium-gray);
             }
-            .main{
+            .main {
                 font: bold 18px/21px Georgia;
                 color: var(--brand-text-dark);
             }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    #content-wrapper {
+        margin-top: 10px;
+        border-top: 1px solid var(--light-blue);
+        #filter-md-wrapper {
+            flex: 1;
+            border-right: 1px solid var(--light-blue);
+        }
+        #search-list-wrapper {
+            flex: 2;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    #ads-wrapper {
+        flex: 1;
+        border-left: 1px solid var(--light-blue);
+        .ads-card {
+            background: transparent url("../../assets/img/ads.png") 0% 0% no-repeat padding-box;
+            border-radius: 15px;
+            height: 180px;
+            background-size: contain;
+            margin: 20px 20px 0;
         }
     }
 }

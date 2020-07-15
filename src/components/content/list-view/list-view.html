@@ -1,172 +1,177 @@
-<div id="search-count" class="pb-2">10 people are here</div>
-<div id="person-list-view">
-    <div class="person-card clearfix">
-        <div class="image-wrapper">
-            <span class="status-icon"></span>
-        </div>
-        <div class="status active clearfix">
-            <div class="status-text text-center float-left">Active</div>
-            <div id="status-menu" class="mdc-menu-surface--anchor float-right">
-                <button class="mdc-icon-button material-icons float-right">more_vert</button>
-                <div class="mdc-menu mdc-menu-surface">
-                    <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1">
-                        <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text">Follow</span>
-                        </li>
-                        <li class="mdc-list-divider" role="separator"></li>
-                        <li class="mdc-list-item report-person" role="menuitem">
-                            <span class="mdc-list-item__text mr-2">Report</span>
-                            <span class="material-icons flag">flag</span>
-                        </li>
-                        <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text mr-2">Block</span>
-                            <span class="material-icons block">block</span>
-                        </li>
-                    </ul>
+<div class="d-flex mt-3">
+    <div id="filter-md-wrapper" class="d-none d-md-block pr-4 mr-4"></div>
+    <div id="person-list-wrapper">
+        <div id="search-count" class="pb-2">10 people are here</div>
+        <div id="person-list-view">
+            <div class="person-card clearfix">
+                <div class="image-wrapper">
+                    <span class="status-icon"></span>
                 </div>
-            </div>
-        </div>
-        <div class="mdc-dialog report-dialog">
-            <div class="mdc-dialog__container">
-                <div class="mdc-dialog__surface" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title"
-                    aria-describedby="my-dialog-content">
-                    <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
-                    <h2 class="mdc-dialog__title" id="my-dialog-title"><span class="material-icons flag">flag</span>
-                        Report inappropriate</h2>
-                    <span class="mdc-list-divider" role="separator"></span>
-                    <div class="mdc-dialog__content" id="my-dialog-content">
-                        <div class="title">Reason</div>
-                        <div id="reason-select" class="mdc-select mdc-select--outlined">
-                            <div class="mdc-select__anchor location-select">
-                                <span id="demo-selected-text" class="mdc-select__selected-text"></span>
-                                <span class="mdc-select__dropdown-icon">
-                                    <svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5">
-                                        <polygon class="mdc-select__dropdown-icon-inactive" stroke="none"
-                                            fill-rule="evenodd" points="7 10 12 15 17 10">
-                                        </polygon>
-                                        <polygon class="mdc-select__dropdown-icon-active" stroke="none"
-                                            fill-rule="evenodd" points="7 15 12 10 17 15">
-                                        </polygon>
-                                    </svg>
-                                </span>
-                                <span class="mdc-notched-outline">
-                                    <span class="mdc-notched-outline__leading"></span>
-                                    <span class="mdc-notched-outline__notch">
-                                        <span id="outlined-select-label" class="mdc-floating-label">Reason 1</span>
-                                    </span>
-                                    <span class="mdc-notched-outline__trailing"></span>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-                            <ul class="mdc-list">
-                                <li class="mdc-list-item mdc-list-item--selected" data-value="" aria-selected="true">
-                                    Reason 1</li>
-                                <li class="mdc-list-item" data-value="grains">
-                                    <span class="mdc-list-item__text">
-                                        Reason 2
-                                    </span>
+                <div class="status active clearfix">
+                    <div class="status-text text-center float-left">Active</div>
+                    <div id="status-menu" class="mdc-menu-surface--anchor float-right">
+                        <button class="mdc-icon-button material-icons float-right">more_vert</button>
+                        <div class="mdc-menu mdc-menu-surface">
+                            <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1">
+                                <li class="mdc-list-item" role="menuitem">
+                                    <span class="mdc-list-item__text">Follow</span>
+                                </li>
+                                <li class="mdc-list-divider" role="separator"></li>
+                                <li class="mdc-list-item report-person" role="menuitem">
+                                    <span class="mdc-list-item__text mr-2">Report</span>
+                                    <span class="material-icons flag">flag</span>
+                                </li>
+                                <li class="mdc-list-item" role="menuitem">
+                                    <span class="mdc-list-item__text mr-2">Block</span>
+                                    <span class="material-icons block">block</span>
                                 </li>
                             </ul>
                         </div>
-                        <label class="mdc-text-field mdc-text-field--textarea mdc-text-field--outlined mt-2">
-                            <textarea class="mdc-text-field__input" aria-labelledby="my-label-id" rows="4" cols="40"
-                                maxlength="100"></textarea>
-                            <span class="mdc-notched-outline">
-                                <span class="mdc-notched-outline__leading"></span>
-                                <span class="mdc-notched-outline__notch">
-                                    <span class="mdc-floating-label" id="my-label-id">Write comments</span>
-                                </span>
-                                <span class="mdc-notched-outline__trailing"></span>
-                            </span>
-                        </label>
-                        <div class="mdc-text-field-helper-line">
-                            <div class="mdc-text-field-character-counter">0 / 100</div>
-                        </div>
-                        <div class="mdc-form-field">
-                            <div class="mdc-checkbox">
-                              <input type="checkbox"
-                                     class="mdc-checkbox__native-control"
-                                     id="checkbox-1"/>
-                              <div class="mdc-checkbox__background">
-                                <svg class="mdc-checkbox__checkmark"
-                                     viewBox="0 0 24 24">
-                                  <path class="mdc-checkbox__checkmark-path"
-                                        fill="none"
-                                        d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-                                </svg>
-                                <div class="mdc-checkbox__mixedmark"></div>
-                              </div>
-                              <div class="mdc-checkbox__ripple"></div>
-                            </div>
-                            <label for="checkbox-1">I accept <a href="">Terms and Conditions</a> regarding Report</label>
-                          </div>
-                    </div>
-                    <div class="mdc-dialog__actions">
-                        <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="accept" id="reportButton">
-                            <div class="mdc-button__ripple"></div>
-                            <span class="mdc-button__label">Report</span>
-                        </button>
-                        <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="close">
-                            <div class="mdc-button__ripple"></div>
-                            <span class="mdc-button__label">Cancel</span>
-                        </button>
                     </div>
                 </div>
-            </div>
-            <div class="mdc-dialog__scrim"></div>
-        </div>
-        <div class="person-details">
-            <p class="name">JANE MORGAN (JANE)</p>
-            <p class="reputation">
-                <i class="fas fa-crown"></i>
-                <span class="text">Reputation 4/5</span>
-                <i class="fas fa-info-circle"></i>
-            </p>
-            <p class="followers d-flex align-items-center">
-                <span class="mr-1">38.2K views</span>
-                <i class="fas fa-circle mr-1"></i>
-                <span class="mr-1">25K followers</span>
-                <span class="material-icons"> supervisor_account </span>
-            </p>
-            <p class="connections">See connections (5)</p>
-            <p class="description">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-                piece of classical <span>read more</span></p>
-            <div class="actions row">
-                <div class="col-4 text-center"><i class="far fa-heart"></i>
-                    <p>3K favorites</p>
-                </div>
-                <div class="col-4 text-center"><i class="far fa-comment-alt"></i>
-                    <p>3K comments</p>
-                </div>
-                <div class="col-4 text-center"><i class="fas fa-share-alt"> </i>
-                    <p>24 shares</p>
-                    <div class="mdc-dialog">
-                        <div class="mdc-dialog__container">
-                            <div class="mdc-dialog__surface" role="alertdialog" aria-modal="true"
-                                aria-labelledby="my-dialog-title" aria-describedby="my-dialog-content">
-                                <div class="mdc-dialog__content" id="my-dialog-content">
-                                    <i class="fab fa-facebook-f mr-2"></i>
-                                    <i class="fab fa-twitter mr-2"></i>
-                                    <i class="fab fa-linkedin-in mr-2"></i>
-                                    <i class="far fa-envelope"></i>
+                <div class="mdc-dialog report-dialog">
+                    <div class="mdc-dialog__container">
+                        <div class="mdc-dialog__surface" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title"
+                            aria-describedby="my-dialog-content">
+                            <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
+                            <h2 class="mdc-dialog__title" id="my-dialog-title"><span class="material-icons flag">flag</span>
+                                Report inappropriate</h2>
+                            <span class="mdc-list-divider" role="separator"></span>
+                            <div class="mdc-dialog__content" id="my-dialog-content">
+                                <div class="title">Reason</div>
+                                <div id="reason-select" class="mdc-select mdc-select--outlined">
+                                    <div class="mdc-select__anchor location-select">
+                                        <span id="demo-selected-text" class="mdc-select__selected-text"></span>
+                                        <span class="mdc-select__dropdown-icon">
+                                            <svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5">
+                                                <polygon class="mdc-select__dropdown-icon-inactive" stroke="none"
+                                                    fill-rule="evenodd" points="7 10 12 15 17 10">
+                                                </polygon>
+                                                <polygon class="mdc-select__dropdown-icon-active" stroke="none"
+                                                    fill-rule="evenodd" points="7 15 12 10 17 15">
+                                                </polygon>
+                                            </svg>
+                                        </span>
+                                        <span class="mdc-notched-outline">
+                                            <span class="mdc-notched-outline__leading"></span>
+                                            <span class="mdc-notched-outline__notch">
+                                                <span id="outlined-select-label" class="mdc-floating-label">Reason 1</span>
+                                            </span>
+                                            <span class="mdc-notched-outline__trailing"></span>
+                                        </span>
+                                    </div>
                                 </div>
+                                <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
+                                    <ul class="mdc-list">
+                                        <li class="mdc-list-item mdc-list-item--selected" data-value="" aria-selected="true">
+                                            Reason 1</li>
+                                        <li class="mdc-list-item" data-value="grains">
+                                            <span class="mdc-list-item__text">
+                                                Reason 2
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <label class="mdc-text-field mdc-text-field--textarea mdc-text-field--outlined mt-2">
+                                    <textarea class="mdc-text-field__input" aria-labelledby="my-label-id" rows="4" cols="40"
+                                        maxlength="100"></textarea>
+                                    <span class="mdc-notched-outline">
+                                        <span class="mdc-notched-outline__leading"></span>
+                                        <span class="mdc-notched-outline__notch">
+                                            <span class="mdc-floating-label" id="my-label-id">Write comments</span>
+                                        </span>
+                                        <span class="mdc-notched-outline__trailing"></span>
+                                    </span>
+                                </label>
+                                <div class="mdc-text-field-helper-line">
+                                    <div class="mdc-text-field-character-counter">0 / 100</div>
+                                </div>
+                                <div class="mdc-form-field">
+                                    <div class="mdc-checkbox">
+                                      <input type="checkbox"
+                                             class="mdc-checkbox__native-control"
+                                             id="checkbox-1"/>
+                                      <div class="mdc-checkbox__background">
+                                        <svg class="mdc-checkbox__checkmark"
+                                             viewBox="0 0 24 24">
+                                          <path class="mdc-checkbox__checkmark-path"
+                                                fill="none"
+                                                d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                                        </svg>
+                                        <div class="mdc-checkbox__mixedmark"></div>
+                                      </div>
+                                      <div class="mdc-checkbox__ripple"></div>
+                                    </div>
+                                    <label for="checkbox-1">I accept <a href="">Terms and Conditions</a> regarding Report</label>
+                                  </div>
+                            </div>
+                            <div class="mdc-dialog__actions">
+                                <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="accept" id="reportButton">
+                                    <div class="mdc-button__ripple"></div>
+                                    <span class="mdc-button__label">Report</span>
+                                </button>
+                                <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="close">
+                                    <div class="mdc-button__ripple"></div>
+                                    <span class="mdc-button__label">Cancel</span>
+                                </button>
                             </div>
                         </div>
-                        <div class="mdc-dialog__scrim"></div>
+                    </div>
+                    <div class="mdc-dialog__scrim"></div>
+                </div>
+                <div class="person-details">
+                    <p class="name">JANE MORGAN (JANE)</p>
+                    <p class="reputation">
+                        <i class="fas fa-crown"></i>
+                        <span class="text">Reputation 4/5</span>
+                        <i class="fas fa-info-circle"></i>
+                    </p>
+                    <p class="followers d-flex align-items-center">
+                        <span class="mr-1">38.2K views</span>
+                        <i class="fas fa-circle mr-1"></i>
+                        <span class="mr-1">25K followers</span>
+                        <span class="material-icons"> supervisor_account </span>
+                    </p>
+                    <p class="connections">See connections (5)</p>
+                    <p class="description">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+                        piece of classical <span>read more</span></p>
+                    <div class="actions row">
+                        <div class="col-4 text-center"><i class="far fa-heart"></i>
+                            <p>3K favorites</p>
+                        </div>
+                        <div class="col-4 text-center"><i class="far fa-comment-alt"></i>
+                            <p>3K comments</p>
+                        </div>
+                        <div class="col-4 text-center"><i class="fas fa-share-alt"> </i>
+                            <p>24 shares</p>
+                            <div class="mdc-dialog">
+                                <div class="mdc-dialog__container">
+                                    <div class="mdc-dialog__surface" role="alertdialog" aria-modal="true"
+                                        aria-labelledby="my-dialog-title" aria-describedby="my-dialog-content">
+                                        <div class="mdc-dialog__content" id="my-dialog-content">
+                                            <i class="fab fa-facebook-f mr-2"></i>
+                                            <i class="fab fa-twitter mr-2"></i>
+                                            <i class="fab fa-linkedin-in mr-2"></i>
+                                            <i class="far fa-envelope"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mdc-dialog__scrim"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="activity mt-4">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <span class="mr-1">CA, USA</span>
+                            <div class="person-pin">
+                                <span class="material-icons">person_pin_circle</span>
+                            </div>
+                        </div>
+                        <div>User since 10 months ago</div>
                     </div>
                 </div>
-            </div>
-            <div class="activity mt-4">
-                <div class="d-flex align-items-center justify-content-end">
-                    <span class="mr-1">CA, USA</span>
-                    <div class="person-pin">
-                        <span class="material-icons">person_pin_circle</span>
-                    </div>
-                </div>
-                <div>User since 10 months ago</div>
             </div>
         </div>
+        <div id="person-map-view" style="display: none;"></div>
     </div>
 </div>
-<div id="person-map-view" style="display: none;"></div>

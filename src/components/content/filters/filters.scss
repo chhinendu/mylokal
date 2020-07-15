@@ -1,0 +1,82 @@
+#filter-wrapper, #filter-md-wrapper {
+    padding: 20px;
+    background: var(--light-gray) 0% 0% no-repeat padding-box;
+    #sort-by {
+        p {
+            font: 16px/21px Roboto;
+            color: var(--dark-gray);
+        }
+        span {
+            padding: 8px;
+            background: var(--white) 0% 0% no-repeat padding-box;
+            box-shadow: 0px 2px 3px var(--off-white);
+            border: 1px solid var(--light-blue);
+            font: 14px/17px Verdana;
+            color: var(--brand-bg-color);
+            display: inline-block;
+            margin: 5px;
+            border-radius: 20px;
+        }
+    }
+    #search-count {
+        font: 12px/15px Verdana;
+        color: var(--dark-gray);
+        margin-top: 10px;
+    }
+    #status-select {
+        width: 100%;
+    }
+    .date-range {
+        .title {
+            color: var(--dark-gray);
+            font: 14px/17px Verdana;
+        }
+        fieldset {
+            max-width: 45%;
+            .datepicker {
+                height: 24px;
+                margin-bottom: 0;
+            }
+        }
+    }
+    .category {
+        label {
+            color: var(--dark-gray);
+            font: 16px/19px Verdana;
+            margin-right: 10px;
+        }
+    }
+    .category-list {
+        padding-left: 20px;
+        p {
+            color: var(--dark-gray);
+            font: Bold 14px/17px Verdana;
+        }
+        .category-type {
+            padding-left: 20px;
+            p {
+                color: var(--medium-gray);
+                font: 14px/17px Verdana;
+            }
+        }
+    }
+    .mdc-floating-label {
+        color: var(--medium-gray);
+        font: 16px/19px Verdana;
+    }
+    .mdc-text-field-helper-line {
+        div {
+            display: flex;
+            align-items: center;
+        }
+        .material-icons {
+            font-size: 14px;
+            margin-right: 5px;
+        }
+        color: var(--dark-gray);
+        font: 12px/15px Verdana;
+    }
+    .mdc-text-field {
+        background-color: var(--white);
+    }
+}

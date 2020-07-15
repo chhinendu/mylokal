@@ -8,11 +8,16 @@ import { MDCTextField } from '@material/textfield';
 import { MDCSlider } from '@material/slider';
 import { MDCSwitch } from '@material/switch';
 import listViewHTML from './list-view/list-view.html';
+import filterHTML from './filters/filters.html';
+import './filters/filters.scss';
 import './list-view/list-view.scss';
 
 document.getElementById('content').innerHTML = contentHTML;
 document.getElementById('search-dashboard').innerHTML = searchDashboardHTML;
 document.getElementById('list-view').innerHTML = listViewHTML;
+document.getElementById('filter-wrapper').innerHTML = filterHTML;
+document.getElementById('filter-md-wrapper').innerHTML = filterHTML;
+
 
 document.getElementById('map-button').addEventListener('click', (event) => {
   event.currentTarget.style.display = 'none';

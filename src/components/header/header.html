@@ -1,48 +1,62 @@
 <div id="header-bar" class="text-right">
-    <i class="fas fa-square mt-2"></i>
-    <i class="fas fa-circle"></i>
-    <i class="fas fa-caret-square-down"></i>
+  <i class="fas fa-square mt-2"></i>
+  <i class="fas fa-circle"></i>
+  <i class="fas fa-caret-square-down"></i>
 </div>
 <div id="header-user" class="d-flex align-items-center justify-content-between">
-    <div>
-        <i class="fas fa-bars"></i>
-        <span>Logo</span>
-    </div>
-    <div class="mr-2 d-flex align-items-center">
-        <i class="fas fa-search mr-2"></i>
-        <i class="far fa-bell mr-2"></i>
-        <span class="profile"></span>
-    </div>
-    <div class="mdc-dialog">
-        <div class="mdc-dialog__container">
-          <div class="mdc-dialog__surface"
-            role="alertdialog"
-            aria-modal="true"
-            aria-labelledby="my-dialog-title"
-            aria-describedby="my-dialog-content">
-            <div class="mdc-dialog__content" id="my-dialog-content">
-                <div class="md-close">
-                    <p><i class="fas fa-times"></i> Close</p>
-                </div>
-                <div class="search">
-                    <label class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon mdc-text-field--with-trailing-icon">
-                        <i class="material-icons mdc-text-field__icon mdc-text-field__icon--leading">search</i>
-                        <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id">
-                        <i class="material-icons mdc-text-field__icon mdc-text-field__icon--trailing" tabindex="0" role="button">clear</i>
-                        <div class="mdc-notched-outline">
-                         <div class="mdc-notched-outline__leading"></div>
-                          <div class="mdc-notched-outline__notch">
-                            <span class="mdc-floating-label" id="my-label-id">Search for people, business</span>
-                          </div>
-                          <div class="mdc-notched-outline__trailing"></div>
-                        </div>
-                      </label>
-                </div>
-                <hr class="mdc-list-divider">
-                <div class="search-results align-items-center justify-content-center d-flex"><span>Search results</span></div>
-            </div>
-          </div>
+  <div>
+    <i class="fas fa-bars"></i>
+    <span>Logo</span>
+  </div>
+  <div class="d-none d-md-flex header-search">
+    <label
+      class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon mdc-text-field--with-trailing-icon">
+      <i class="material-icons mdc-text-field__icon mdc-text-field__icon--leading">search</i>
+      <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id">
+      <i class="material-icons mdc-text-field__icon mdc-text-field__icon--trailing" tabindex="0" role="button">clear</i>
+      <div class="mdc-notched-outline">
+        <div class="mdc-notched-outline__leading"></div>
+        <div class="mdc-notched-outline__notch">
+          <span class="mdc-floating-label" id="my-label-id">Search for people, business</span>
         </div>
-        <div class="mdc-dialog__scrim"></div>
+        <div class="mdc-notched-outline__trailing"></div>
       </div>
+    </label>
+  </div>
+  <div class="mr-2 d-flex align-items-center">
+    <i class="fas fa-search mr-2 d-md-none"></i>
+    <i class="far fa-bell mr-2"></i>
+    <span class="profile"></span>
+  </div>
+  <div class="mdc-dialog">
+    <div class="mdc-dialog__container">
+      <div class="mdc-dialog__surface" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title"
+        aria-describedby="my-dialog-content">
+        <div class="mdc-dialog__content" id="my-dialog-content">
+          <div class="md-close">
+            <p><i class="fas fa-times"></i> Close</p>
+          </div>
+          <div class="search">
+            <label
+              class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon mdc-text-field--with-trailing-icon">
+              <i class="material-icons mdc-text-field__icon mdc-text-field__icon--leading">search</i>
+              <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id">
+              <i class="material-icons mdc-text-field__icon mdc-text-field__icon--trailing" tabindex="0"
+                role="button">clear</i>
+              <div class="mdc-notched-outline">
+                <div class="mdc-notched-outline__leading"></div>
+                <div class="mdc-notched-outline__notch">
+                  <span class="mdc-floating-label" id="my-label-id">Search for people, business</span>
+                </div>
+                <div class="mdc-notched-outline__trailing"></div>
+              </div>
+            </label>
+          </div>
+          <hr class="mdc-list-divider">
+          <div class="search-results align-items-center justify-content-center d-flex"><span>Search results</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="mdc-dialog__scrim"></div>
+  </div>
 </div>

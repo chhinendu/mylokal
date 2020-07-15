@@ -53,6 +53,16 @@
                     height: 300px;
                 }
             }
+            .header-search {
+                .mdc-text-field--outlined, .mdc-text-field__input {
+                    height: 30px;
+                    margin-bottom: 0;
+                }
+                .mdc-floating-label--float-above {
+                    transform: translateY(-22.75px) translateX(-32px) scale(0.75);
+                }
+            }
         }
+        
     }
 }

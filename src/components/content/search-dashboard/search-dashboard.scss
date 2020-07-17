@@ -66,7 +66,7 @@
             }
         }
 
-        #action-buttons {
+        .action-buttons {
             button {
                 width: 140px;
                 height: 48px;
@@ -74,11 +74,16 @@
                 border-radius: 50px;
                 text-transform: none;
             }
-            #map-button,
-            #list-button {
+            .map-button,
+            .list-button,
+            .table-button {
                 color: var(--brand-bg-color);
+                &.active {
+                    color: var(--white);
+                    background-color: var(--brand-bg-color);
+                }
             }
-            #filter-button {
+            .filter-button {
                 color: var(--white);
                 background-color: var(--brand-bg-color);
             }
@@ -96,8 +101,10 @@
                 }
             }
             .mdc-dialog__surface {
+                max-width: calc(100vw);
+                max-height: calc(100vh);
                 width: calc(100vw);
-                height: 500px;
+                height: calc(100vh);
                 .mdc-dialog__content {
                     background: var(--light-gray) 0% 0% no-repeat padding-box;
                 }

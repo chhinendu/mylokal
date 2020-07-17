@@ -58,20 +58,38 @@
     </div>
   </div>
 </div>
-<div id="action-buttons" class="d-flex justify-content-around pt-3">
-  <button id="filter-button" class="mdc-button--raised">
+<div id="action-sm" class="action-buttons d-flex justify-content-around pt-3 d-md-none">
+  <button id="" class="filter-button mdc-button--raised">
     <span class="mdc-button__label">Filters</span>
   </button>
-  <button id="map-button" class="mdc-button">
+  <button id="" class="map-button mdc-button">
     <div class="mdc-button__ripple"></div>
     <i class="far fa-map"></i>
     <span class="mdc-button__label">Map View</span>
   </button>
-  <button id="list-button" class="mdc-button" style="display: none;">
+  <button id="" class="list-button mdc-button" style="display: none;">
     <div class="mdc-button__ripple"></div>
     <i class="fas fa-list"></i>
     <span class="mdc-button__label">List View</span>
   </button>
+</div>
+<div id="action-md" class="action-buttons d-none justify-content-end pt-3 d-md-flex">
+  <button id="" class="list-button mdc-button mr-3 active">
+    <div class="mdc-button__ripple"></div>
+    <i class="fas fa-list"></i>
+    <span class="mdc-button__label">List View</span>
+  </button>
+  <button id="" class="table-button mdc-button mr-3 d-none d-xl-block">
+    <div class="mdc-button__ripple"></div>
+    <i class="fas fa-table"></i>
+    <span class="mdc-button__label">Table View</span>
+  </button>
+  <button id="" class="map-button mdc-button mr-3">
+    <div class="mdc-button__ripple"></div>
+    <i class="far fa-map"></i>
+    <span class="mdc-button__label">Map View</span>
+  </button>
+  
 </div>
 <div class="mdc-dialog" id="filters">
   <div class="mdc-dialog__container">

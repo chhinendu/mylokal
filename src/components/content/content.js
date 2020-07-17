@@ -19,16 +19,41 @@ document.getElementById('filter-wrapper').innerHTML = filterHTML;
 document.getElementById('filter-md-wrapper').innerHTML = filterHTML;
 
 
-document.getElementById('map-button').addEventListener('click', (event) => {
+document.querySelector('#action-sm .map-button').addEventListener('click', (event) => {
   event.currentTarget.style.display = 'none';
-  document.getElementById('list-button').style.display = 'block';
+  document.querySelector('#action-sm .list-button').style.display = 'block';
   document.getElementById('person-list-view').style.display = 'none';
   document.getElementById('person-map-view').style.display = 'block';
 });
-document.getElementById('list-button').addEventListener('click', () => {
+document.querySelector('#action-sm .list-button').addEventListener('click', () => {
   event.currentTarget.style.display = 'none';
-  document.getElementById('map-button').style.display = 'block';
+  document.querySelector('#action-sm .map-button').style.display = 'block';
   document.getElementById('person-list-view').style.display = 'block';
+  document.getElementById('person-map-view').style.display = 'none';
+});
+
+document.querySelector('#action-md .map-button').addEventListener('click', (event) => {
+  document.querySelector('#action-md .map-button').classList.add('active');
+  document.querySelector('#action-md .list-button').classList.remove('active');
+  document.querySelector('#action-md .table-button').classList.remove('active');
+  document.getElementById('person-list-view').style.display = 'none';
+  document.getElementById('person-table-view').style.display = 'none';
+  document.getElementById('person-map-view').style.display = 'block';
+});
+document.querySelector('#action-md .list-button').addEventListener('click', () => {
+  document.querySelector('#action-md .map-button').classList.remove('active');
+  document.querySelector('#action-md .list-button').classList.add('active');
+  document.querySelector('#action-md .table-button').classList.remove('active');
+  document.getElementById('person-list-view').style.display = 'block';
+  document.getElementById('person-table-view').style.display = 'none';
+  document.getElementById('person-map-view').style.display = 'none';
+});
+document.querySelector('#action-md .table-button').addEventListener('click', () => {
+  document.querySelector('#action-md .map-button').classList.remove('active');
+  document.querySelector('#action-md .list-button').classList.remove('active');
+  document.querySelector('#action-md .table-button').classList.add('active');
+  document.getElementById('person-list-view').style.display = 'none';
+  document.getElementById('person-table-view').style.display = 'block';
   document.getElementById('person-map-view').style.display = 'none';
 });
 
@@ -49,7 +74,7 @@ const dialogReport = new MDCDialog(document.querySelector('.report-dialog'));
 document.querySelector('.report-person').addEventListener('click', () => dialogReport.open());
 
 const dialogFilter = new MDCDialog(document.querySelector('#filters'));
-document.querySelector('#filter-button').addEventListener('click', () => dialogFilter.open());
+document.querySelector('.filter-button').addEventListener('click', () => dialogFilter.open());
 
 new MDCTextField(document.querySelector('#keyword-search .mdc-text-field'));
 new MDCTextField(document.querySelector('#person-search .mdc-text-field'));

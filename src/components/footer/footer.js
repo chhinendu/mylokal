@@ -1,4 +1,4 @@
 import footerHTML from './footer.html';
-import './footer.scss';
+import './footer.less';
 
 document.getElementById('footer').innerHTML = footerHTML;

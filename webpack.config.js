@@ -16,7 +16,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.s[ac]ss$/i,
+                test: /\.less$/,
                 use: [
                     // Creates `style` nodes from JS strings
                     'style-loader',
@@ -28,20 +28,8 @@ module.exports = {
                             plugins: () => [autoprefixer()]
                         }
                     },
-                    // Compiles Sass to CSS
-                    {
-                        loader: 'sass-loader',
-                        options: {
-                            // Prefer Dart Sass
-                            implementation: require('sass'),
-
-                            // See https://github.com/webpack-contrib/sass-loader/issues/804
-                            webpackImporter: false,
-                            sassOptions: {
-                                includePaths: [path.resolve(__dirname, "node_modules")]
-                            },
-                        }
-                    },
+                    // Compiles Less to CSS
+                    'less-loader'
                 ],
             },
             {

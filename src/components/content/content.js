@@ -1,16 +1,10 @@
 import contentHTML from './content.html';
-import './content.scss';
+import './content.less';
 import searchDashboardHTML from './search-dashboard/search-dashboard.html';
-import { MDCSelect } from '@material/select';
-import { MDCMenu } from '@material/menu';
-import { MDCDialog } from '@material/dialog';
-import { MDCTextField } from '@material/textfield';
-import { MDCSlider } from '@material/slider';
-import { MDCSwitch } from '@material/switch';
 import listViewHTML from './list-view/list-view.html';
 import filterHTML from './filters/filters.html';
-import './filters/filters.scss';
-import './list-view/list-view.scss';
+import './filters/filters.less';
+import './list-view/list-view.less';
 
 document.getElementById('content').innerHTML = contentHTML;
 document.getElementById('search-dashboard').innerHTML = searchDashboardHTML;
@@ -57,29 +51,29 @@ document.querySelector('#action-md .table-button').addEventListener('click', () 
   document.getElementById('person-map-view').style.display = 'none';
 });
 
-const select = new MDCSelect(document.getElementById('location-select'));
+const select = new mdc.select.MDCSelect(document.getElementById('location-select'));
 
 select.listen('MDCSelect:change', () => {
   alert(`Selected option at index ${select.selectedIndex} with value "${select.value}"`);
 });
 
-const menu = new MDCMenu(document.querySelector('#status-menu .mdc-menu'));
+const menu = new mdc.menu.MDCMenu(document.querySelector('#status-menu .mdc-menu'));
 
 document.querySelector('#status-menu .mdc-icon-button').addEventListener('click', () => menu.open = true);
 
-const dialog = new MDCDialog(document.querySelector('.actions .mdc-dialog'));
+const dialog = new mdc.dialog.MDCDialog(document.querySelector('.actions .mdc-dialog'));
 document.querySelector('.actions .fa-share-alt').addEventListener('click', () => dialog.open());
 
-const dialogReport = new MDCDialog(document.querySelector('.report-dialog'));
+const dialogReport = new mdc.dialog.MDCDialog(document.querySelector('.report-dialog'));
 document.querySelector('.report-person').addEventListener('click', () => dialogReport.open());
 
-const dialogFilter = new MDCDialog(document.querySelector('#filters'));
+const dialogFilter = new mdc.dialog.MDCDialog(document.querySelector('#filters'));
 document.querySelector('.filter-button').addEventListener('click', () => dialogFilter.open());
 
-new MDCTextField(document.querySelector('#keyword-search .mdc-text-field'));
-new MDCTextField(document.querySelector('#person-search .mdc-text-field'));
+new mdc.textField.MDCTextField(document.querySelector('#keyword-search .mdc-text-field'));
+new mdc.textField.MDCTextField(document.querySelector('#person-search .mdc-text-field'));
 
-const slider = new MDCSlider(document.querySelector('.mdc-slider'));
+const slider = new mdc.slider.MDCSlider(document.querySelector('.mdc-slider'));
 slider.listen('MDCSlider:change', () => console.log(`Value changed to ${slider.value}`));
 // Known issue - https://github.com/material-components/material-components-web/issues/1017
 dialogFilter.listen('MDCDialog:opened', () => slider.layout());
@@ -89,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var instances = M.Datepicker.init(elems);
 });
 
-new MDCSelect(document.getElementById('status-select'));
+new mdc.select.MDCSelect(document.getElementById('status-select'));
 
-new MDCSwitch(document.querySelector('.mdc-switch'));
+new mdc.switchControl.MDCSwitch(document.querySelector('.mdc-switch'));
 
